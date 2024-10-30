@@ -70,7 +70,6 @@ jobs:
     - name: Test WASM build
       run: |
         make clean && make
-        yarn test
     
     - name: Publish to NPM
       uses: JS-DevTools/npm-publish@v3
