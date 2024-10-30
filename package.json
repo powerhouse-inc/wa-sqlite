@@ -1,5 +1,5 @@
 {
-  "name": "wa-sqlite",
+  "name": "@powerhousedao/wa-sqlite",
   "version": "1.0.3",
   "type": "module",
   "main": "src/sqlite-api.js",
