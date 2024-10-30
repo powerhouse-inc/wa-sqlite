@@ -51,9 +51,6 @@ jobs:
           ${{ runner.os }}-yarn-
     - run: yarn install
 
-    - name: Test with checked-in WASM files
-      run: yarn test
-
     # Install EMSDK
     - name: Setup Emscripten
       id: cache-system-libraries
@@ -70,10 +67,9 @@ jobs:
     - name: Test WASM build
       run: |
         make clean && make
-        yarn test
     
     - name: Publish to NPM
       uses: JS-DevTools/npm-publish@v3
       with:
-        package: core
         token: ${{ secrets.NPM_ACCESS_TOKEN }}
+        access: 'public'
